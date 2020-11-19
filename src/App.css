@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 250ms ease-in-out;
+  z-index: 20;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 700px) {
+  .ReactModal__Content--after-open {
+    background: 0 !important;
+    border: 0 !important;
+    border-radius: 1.5rem !important;
+    display: flex !important;
+    inset: 30px 22% 30px 22% !important;
+    justify-content: center;
+    padding: 0 !important;
+    scrollbar-width: none;
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 700px) {
+  .ReactModal__Content--after-open {
+    background: 0 !important;
+    border: 0 !important;
+    border-radius: 1.5rem !important;
+    display: flex !important;
+    inset: 0 !important;
+    justify-content: center;
+    padding: 0 !important;
+    scrollbar-width: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateY(-100px);
 }
