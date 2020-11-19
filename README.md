@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a web app to find the movie you're looking for!
 
+### Node version
+
+v14.15.0
+
 ## Available Scripts
 
 In the project directory, you can run:

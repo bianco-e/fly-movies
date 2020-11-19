@@ -12,7 +12,7 @@ export default function MovieModal({ closeModal, isOpen, movie }) {
     release_date,
     id
   } = movie;
-  const [year] = release_date?.split("-");
+  const year = release_date && release_date?.substring(0, 4);
   return (
     <Modal closeTimeoutMS={250} isOpen={isOpen} onRequestClose={closeModal}>
       <Wrapper>
